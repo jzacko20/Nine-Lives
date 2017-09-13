@@ -23,10 +23,8 @@ public class ChaseDrone : MonoBehaviour {
 	
 	//Move to guy
 	void FixedUpdate() {
-		//t.Translate(t.position - targetTransform*Time.deltaTime*moveRate);
-		//rb.MovePosition(t.position + t.forward * Time.deltaTime* moveRate);
-		rb.MovePosition(t.position+Vector3.Normalize(target.position - t.position ) * Time.deltaTime* moveSpeed);
-		//rb.MovePosition(t.position+(target.position - t.position) * Time.deltaTime * moveSpeed);
+		rb.MovePosition(t.position+Vector3.Normalize(target.position - t.position ) * Time.deltaTime* moveSpeed);	//set speed (floaty for some reason)
+		//rb.MovePosition(t.position+(target.position - t.position) * Time.deltaTime * moveSpeed);		//move rate. 
 	}
 
 }
